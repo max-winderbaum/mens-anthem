@@ -3,16 +3,16 @@ import Layout from "../components/layout"
 import Seo from "../components/seo"
 import { H1, P } from "../components/tags"
 
-const IndexPage = () => (
+const ContactPage = () => (
   <Layout>
-    <Seo title="Home" />
+    <Seo title="Contact" />
     <section
       style={{
         marginTop: `2rem`,
         textAlign: `left`,
       }}
     >
-      <H1>We are men who unite to grow, share, and connect.</H1>
+      <H1>Contact</H1>
       <P>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
@@ -26,4 +26,4 @@ const IndexPage = () => (
   </Layout>
 )
 
-export default IndexPage
+export default ContactPage

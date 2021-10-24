@@ -3,12 +3,15 @@ import PropTypes from "prop-types"
 import { Link } from "./link"
 
 import LogoText from "../images/brand/logo-text-inline.svg"
+import { fonts } from "../fonts"
 
 const HeaderLink = (props) => (
   <span
     style={{
       marginLeft: `2rem`,
-      marginTop: `0.25rem`,
+      marginTop: `0.8rem`,
+      fontSize: `0.9rem`,
+      fontFamily: fonts.nav,
     }}
   >
     <Link {...props}>{props.children}</Link>
@@ -28,14 +31,15 @@ const Header = () => (
       <Link to="/">
         <LogoText
           style={{
-            height: `2rem`
+            height: `2.5rem`
           }}
         />
       </Link>
-      <HeaderLink to="/page-2/">About</HeaderLink>
-      <HeaderLink to="/using-typescript/">Our Principles</HeaderLink>
-      <HeaderLink to="/using-ssr">Code of Conduct</HeaderLink>
-      <HeaderLink to="/using-dsg">Upcoming Meetings</HeaderLink>
+      <HeaderLink to="/about/">About</HeaderLink>
+      <HeaderLink to="/events/">Events</HeaderLink>
+      <HeaderLink to="/principles/">Principles</HeaderLink>
+      <HeaderLink to="/code/">Our code</HeaderLink>
+      <HeaderLink to="/contact/">Contact</HeaderLink>
     </div>
   </header>
 )

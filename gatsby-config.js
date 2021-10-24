@@ -25,6 +25,7 @@ module.exports = {
       },
     },
     `gatsby-transformer-sharp`,
+    `gatsby-plugin-emotion`,
     {
       resolve: `gatsby-plugin-sharp`,
       options: {
@@ -42,6 +43,16 @@ module.exports = {
           avifOptions: {},
         },
       },
+    },
+    {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [
+          `Ubuntu\:300,300i,400`,
+          `Source+Sans+Pro\:300,300i,700`
+        ],
+        display: 'block'
+      }
     },
     {
       resolve: `gatsby-plugin-manifest`,
