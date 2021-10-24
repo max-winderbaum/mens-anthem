@@ -1,5 +1,5 @@
 import * as React from "react"
-import { StaticImage } from "gatsby-plugin-image"
+import Logo from "../images/mens-anthem.svg"
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
@@ -7,12 +7,12 @@ import Seo from "../components/seo"
 const IndexPage = () => (
   <Layout>
     <Seo title="Home" />
-    <StaticImage
-      src="../images/mens-anthem.svg"
-      quality={95}
-      formats={["auto", "webp", "avif"]}
+    <Logo
       alt="Men's Anthem Logo"
-      style={{ width: `50%`, marginBottom: `1.45rem`, marginTop: `1.45rem` }}
+      style={{
+        width: `50%`,
+        marginTop: `1.45rem`,
+      }}
     />
   </Layout>
 )
