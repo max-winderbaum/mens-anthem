@@ -1,32 +1,41 @@
 import * as React from "react"
 import PropTypes from "prop-types"
-import { Link } from "gatsby"
+import { Link } from "./link"
 
-const Header = ({ siteTitle }) => (
-  <header
+import LogoText from "../images/brand/logo-text-inline.svg"
+
+const HeaderLink = (props) => (
+  <span
     style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
+      marginLeft: `2rem`,
+      marginTop: `0.25rem`,
     }}
   >
+    <Link {...props}>{props.children}</Link>
+  </span>
+)
+const Header = () => (
+  <header>
     <div
       style={{
         margin: `0 auto`,
         maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
+        padding: `0.75rem 1rem`,
+        display: `flex`,
+        justifyContent: `flex-start`,
       }}
     >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
+      <Link to="/">
+        <LogoText
           style={{
-            color: `white`,
-            textDecoration: `none`,
+            height: `2rem`
           }}
-        >
-          {siteTitle}
-        </Link>
-      </h1>
+        />
+      </Link>
+      <HeaderLink to="/page-2/">About</HeaderLink>
+      <HeaderLink to="/using-typescript/">Our Principles</HeaderLink>
+      <HeaderLink to="/using-ssr">Code of Conduct</HeaderLink>
+      <HeaderLink to="/using-dsg">Upcoming Meetings</HeaderLink>
     </div>
   </header>
 )
